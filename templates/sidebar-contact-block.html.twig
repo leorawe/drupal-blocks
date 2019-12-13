@@ -1,0 +1,19 @@
+<div class="contact__content">
+  <dl>
+    {% if result.name %}
+      <dt>
+        {{ result.name }}</dt>
+    {% endif %}
+    {% if  result.email %}
+      <dt>
+        <a href="mailto:{{ result.email }}">{{ result.email }}</a>
+      </dt>
+    {% endif %}
+    {% if result.programlink %}
+      <dt>
+        <a href={{ result.programlink }} > 
+          {% if result.programtext %} {{ result.programtext }} {% else %} Program {% endif %}
+      </a></dt>
+    {% endif %}
+  </dl>
+</div>
